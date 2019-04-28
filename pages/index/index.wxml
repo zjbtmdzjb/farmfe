@@ -1,0 +1,24 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">首页</view>
+</cu-custom>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action">
+    <view class="cuIcon-cu-image">
+      <text class="cuIcon-message lg text-gray"></text>
+    </view>
+    <view class="text-green">信息</view>
+  </view>
+  <view class="action">
+    <view class="cuIcon-cu-image">
+      <text class="cuIcon-read lg text-gray"></text>
+    </view>
+    <view class="text-gray">记录</view>
+  </view>
+  <view class="action" bindtap="navChange">
+    <view class="cuIcon-cu-image">
+      <text class="cuIcon-my lg text-gray"></text>
+    </view>
+    <view class="text-gray">我的</view>
+  </view>
+</view>
