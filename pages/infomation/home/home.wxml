@@ -1,0 +1,55 @@
+<!--pages/infomation/home/home.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">信息</view>
+</cu-custom>
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看产犊记录</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看配种记录</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看妊娠诊断记录</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看产奶记录</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看生长发育记录</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看DHI取样记录</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看适时提醒</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <view class="content">
+      <text class="cuIcon-circlefill text-grey"></text>
+      <text class="text-grey">查看系谱档案</text>
+    </view>
+  </view>
+</view>

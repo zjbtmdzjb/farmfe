@@ -7,7 +7,7 @@ Page({
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
     motto: 'Hi 开发者！',
-    PageCur: 'message',
+    PageCur: 'infomation',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -20,6 +20,11 @@ Page({
   recoverimg: function() {
     this.setData({
       login_cow: '/images/login_cow.png'
+    })
+  },
+  indexChange: function(e) {
+    this.setData({
+      PageCur: e.currentTarget.dataset.cur
     })
   },
   navChange: function(e) {

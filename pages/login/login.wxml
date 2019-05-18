@@ -1,4 +1,5 @@
-<cu-custom bgColor="bg-gradual-blue">
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
   <view slot="content">登录</view>
 </cu-custom>
 <block>
@@ -33,7 +34,7 @@
     </view>
     <view class="padding flex flex-direction">
       <button class="cu-btn bg-gradual-blue lg">登录</button>
-      <button class="cu-btn bg-gray margin-tb-sm lg">注册</button>
+      <button class="cu-btn bg-gray margin-tb-sm lg"   bindtap="toRegister">注册</button>
     </view>
   </view>
 

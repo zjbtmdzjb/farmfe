@@ -1,9 +1,6 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">首页</view>
-</cu-custom>
-
+<infomation wx:if="{{PageCur=='infomation'}}"></infomation>
 <view class="cu-bar tabbar bg-white shadow foot">
-  <view class="action">
+  <view class="action" bindtap="indexChange" data-cur="infomation">
     <view class="cuIcon-cu-image">
       <text class="cuIcon-message lg text-gray"></text>
     </view>
