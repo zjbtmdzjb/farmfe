@@ -4,7 +4,8 @@
     "pages/login/login",
     "pages/register/register",
     "pages/infomation/home/home",
-    "pages/infomation/list/list"
+    "pages/infomation/list/list",
+    "pages/record/form/form"
   ],
   "window": {
     "backgroundTextStyle": "light",

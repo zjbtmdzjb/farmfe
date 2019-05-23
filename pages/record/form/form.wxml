@@ -1,0 +1,7 @@
+<!--pages/record/form/form.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">{{name}}</view>
+</cu-custom>
+
+<calve wx:if="{{link=='calve'}}"></calve>

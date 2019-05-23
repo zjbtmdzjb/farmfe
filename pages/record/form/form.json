@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "calve" : "/pages/record/calve/calve"
+  }
+}

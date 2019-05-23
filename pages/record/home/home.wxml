@@ -1,10 +1,10 @@
-<cu-custom bgColor="bg-gradual-purple">
+<cu-custom bgColor="bg-gradual-pink">
   <view slot="content">记录</view>
 </cu-custom>
 
 <view class="cu-list menu card-menu margin-top">
   <view class="cu-item arrow" wx:for="{{cowrecords}}" wx:key="id">
-    <view class="content">
+    <view class="content padding-tb-lg" bindtap='toForm' data-text='{{item.name}}' data-link='{{item.link}}'>
       <text class="cuIcon-circlefill text-grey"></text>
       <text class="text-grey">填写{{item.name}}</text>
     </view>

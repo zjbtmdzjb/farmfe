@@ -1,0 +1,94 @@
+<!--pages/record/calve/calve.wxml-->
+<form>
+  <view class="cu-form-group margin-top">
+		<view class="title">母牛号</view>
+		<input placeholder="统一标题的宽度"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">分娩日期</view>
+		<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">阴道开始流水时间</view>
+		<picker mode="time" value="{{time3}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='time3'>
+			<view class="picker">
+				{{time3}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">胎儿露出阴门时间</view>
+		<picker mode="time" value="{{time4}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='time4'>
+			<view class="picker">
+				{{time4}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">露出阴门的胎儿器官</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{organs}}">
+			<view class="picker">
+				{{index?organs[index]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">胎儿娩出时间</view>
+		<picker mode="time" value="{{time6}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='time6'>
+			<view class="picker">
+				{{time6}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">胎盘排出时间</view>
+		<picker mode="time" value="{{time7}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='time7'>
+			<view class="picker">
+				{{time7}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">产犊难易度</view>
+		<input disabled='false' value='{{difficulty}}'></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">胎衣排出是否完整</view>
+		<picker bindchange="PickerComplete" value="{{index2}}" range="{{complete}}">
+			<view class="picker">
+				{{index2?complete[index2]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">犊牛编号</view>
+		<input placeholder="统一标题的宽度"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">犊牛性别</view>
+		<picker bindchange="PickerSex" value="{{index3}}" range="{{sex}}">
+			<view class="picker">
+				{{index3?sex[index3]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">犊牛出生重</view>
+		<input placeholder="统一标题的宽度"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">犊牛乳头对称间距</view>
+		<input placeholder="统一标题的宽度"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">犊牛估计育种值</view>
+		<input placeholder="统一标题的宽度"></input>
+	</view>
+</form>
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-gradual-pink lg">提交</button>
+</view>
