@@ -1,21 +1,23 @@
 <infomation wx:if="{{PageCur=='infomation'}}"></infomation>
+<record wx:if="{{PageCur=='record'}}"></record>
+<about wx:if="{{PageCur=='about'}}"></about>
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="indexChange" data-cur="infomation">
     <view class="cuIcon-cu-image">
-      <text class="cuIcon-message lg text-gray"></text>
+      <text class="cuIcon-message lg {{PageCur=='infomation'?'text-green':'text-gray'}}"></text>
     </view>
-    <view class="text-green">信息</view>
+    <view class="{{PageCur=='infomation'?'text-green':'text-gray'}}">信息</view>
   </view>
-  <view class="action">
+  <view class="action" bindtap='indexChange' data-cur="record">
     <view class="cuIcon-cu-image">
-      <text class="cuIcon-read lg text-gray"></text>
+      <text class="cuIcon-read lg {{PageCur=='record'?'text-green':'text-gray'}}"></text>
     </view>
-    <view class="text-gray">记录</view>
+    <view class="{{PageCur=='record'?'text-green':'text-gray'}}">记录</view>
   </view>
-  <view class="action" bindtap="navChange">
+  <view class="action" bindtap="indexChange" data-cur="about">
     <view class="cuIcon-cu-image">
-      <text class="cuIcon-my lg text-gray"></text>
+      <text class="cuIcon-my lg {{PageCur=='about'?'text-green':'text-gray'}}"></text>
     </view>
-    <view class="text-gray">我的</view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">我的</view>
   </view>
 </view>

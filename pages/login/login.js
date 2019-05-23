@@ -18,6 +18,9 @@ Page({
       login_cow: '/images/login_cow.png'
     })
   },
+  noAction: function () {
+
+  },
   toRegister: function() {
     wx.navigateTo({
       url: '/pages/register/register',  //跳转页面的路径，可带参数 ？隔开，不同参数用 & 分隔；相对路径

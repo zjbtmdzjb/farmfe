@@ -6,15 +6,15 @@
 <form>
   <view class="cu-form-group margin-top">
 		<view class="title">用户名</view>
-		<input placeholder="请输入用户名"></input>
+		<input name='username' placeholder="请输入用户名"></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">用户密码</view>
-		<input placeholder="请输入用户密码" type='password'></input>
+		<input name='password' placeholder="请输入用户密码" type='password'></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">牛场名</view>
-		<input placeholder="请输入牛场名"></input>
+		<input name='farmname' placeholder="请输入牛场名"></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">用户职级</view>

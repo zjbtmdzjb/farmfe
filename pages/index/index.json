@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "infomation": "/pages/infomation/home/home"
+    "infomation": "/pages/infomation/home/home",
+    "record": "/pages/record/home/home",
+    "about": "/pages/about/home/home"
   }
 }

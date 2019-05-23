@@ -1,0 +1,53 @@
+<!--pages/infomation/list/list.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">{{name}}</view>
+</cu-custom>
+
+<view class="cu-timeline">
+  <view class="cu-time">06-17</view>
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">上午</view>
+        <view class="cu-tag line-cyan">10:00</view>
+      </view>
+      <view class="margin-top">{{name}}1</view>
+    </view>
+  </view>
+</view><view class="cu-timeline">
+  <view class="cu-time">06-17</view>
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">上午</view>
+        <view class="cu-tag line-cyan">10:00</view>
+      </view>
+      <view class="margin-top">{{name}}1</view>
+    </view>
+  </view>
+</view>
+<view class="cu-timeline">
+  <view class="cu-time">06-17</view>
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">上午</view>
+        <view class="cu-tag line-cyan">10:00</view>
+      </view>
+      <view class="margin-top">{{name}}1</view>
+    </view>
+  </view>
+</view>
+<view class="cu-timeline">
+  <view class="cu-time">06-17</view>
+  <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">上午</view>
+        <view class="cu-tag line-cyan">10:00</view>
+      </view>
+      <view class="margin-top">{{name}}1</view>
+    </view>
+  </view>
+</view>

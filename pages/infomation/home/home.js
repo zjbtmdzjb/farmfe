@@ -4,9 +4,43 @@ Component({
     addGlobalClass: true,
   },
   data: {
-
+    cowinfos: [{
+      id:1,
+      name:'产犊记录'
+    },{
+      id:2,
+      name:'配种记录'
+    },{
+      id:3,
+      name:'妊娠诊断记录'
+    },{
+      id:4,
+      name:'产奶记录'
+    },{
+      id:5,
+      name:'生长发育记录'
+    },{
+      id:6,
+      name:'DHI取样记录'
+    },{
+      id:7,
+      name:'适时提醒'
+    },{
+      id:8,
+      name:'系谱档案'
+    }]
   },
-
+  methods: {
+    toInfo: function (e) {
+      var name = e.currentTarget.dataset.text
+      wx.navigateTo({
+        url: '/pages/infomation/list/list?name='+name,  //跳转页面的路径，可带参数 ？隔开，不同参数用 & 分隔；相对路径
+        success: function () { },        //成功后的回调；
+        fail: function () { },          //失败后的回调；
+        complete: function () { },      //结束后的回调(成功，失败都会执行)
+      })
+    },
+  },
   /**
    * 生命周期函数--监听页面加载
    */
