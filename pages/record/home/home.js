@@ -19,7 +19,8 @@ Component({
       link:'calve'
     },{
       id:2,
-      name:'配种记录'
+      name:'配种记录',
+      link:'breed'
     },{
       id:3,
       name:'妊娠诊断记录'

@@ -2,7 +2,7 @@
 <form>
   <view class="cu-form-group margin-top">
 		<view class="title">母牛号</view>
-		<input placeholder="统一标题的宽度"></input>
+		<input placeholder="填写母牛号"></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">分娩日期</view>
@@ -57,6 +57,10 @@
 		<input disabled='false' value='{{difficulty}}'></input>
 	</view>
   <view class="cu-form-group">
+		<view class="title">胎盘排出时间</view>
+		<input disabled='false' value='{{placentatime}}分钟'></input>
+	</view>
+  <view class="cu-form-group">
 		<view class="title">胎衣排出是否完整</view>
 		<picker bindchange="PickerComplete" value="{{index2}}" range="{{complete}}">
 			<view class="picker">
@@ -66,7 +70,7 @@
 	</view>
   <view class="cu-form-group">
 		<view class="title">犊牛编号</view>
-		<input placeholder="统一标题的宽度"></input>
+		<input placeholder="填写犊牛编号"></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">犊牛性别</view>
@@ -78,17 +82,17 @@
 	</view>
   <view class="cu-form-group">
 		<view class="title">犊牛出生重</view>
-		<input placeholder="统一标题的宽度"></input>
+		<input placeholder="填写犊牛出生重"></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">犊牛乳头对称间距</view>
-		<input placeholder="统一标题的宽度"></input>
+		<input placeholder="填写犊牛乳头对称间距"></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">犊牛估计育种值</view>
-		<input placeholder="统一标题的宽度"></input>
+		<input placeholder="填写犊牛估计育种值"></input>
 	</view>
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-gradual-pink lg">提交</button>
+  </view>
 </form>
-<view class="padding flex flex-direction">
-  <button class="cu-btn bg-gradual-pink lg">提交</button>
-</view>

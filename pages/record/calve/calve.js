@@ -28,7 +28,7 @@ Component({
     complete: ['完整','不完整'],
     sex: ['公','母'],
     difficulty: '',
-    
+    placentatime: ''
   },
 
   /**
@@ -62,6 +62,7 @@ Component({
           })
           break
       }
+      //这样的计算方法好像不太好，可能未来会改进
       if(this.data.time3_minute != "" && this.data.time6_minute != "") {
         //计算产犊难易度时间
         var starttime = parseInt(this.data.time3_minute[0])*60 + parseInt(this.data.time3_minute[1])
@@ -69,6 +70,15 @@ Component({
         var result = endtime - starttime
         this.setData({
           difficulty: result
+        })
+      }
+      if(this.data.time3_minute != "" && this.data.time7_minute != "") {
+        //计算胎盘排出时间
+        var starttime = parseInt(this.data.time3_minute[0]) * 60 + parseInt(this.data.time3_minute[1])
+        var endtime = parseInt(this.data.time7_minute[0]) * 60 + parseInt(this.data.time7_minute[1])
+        var result = endtime - starttime
+        this.setData({
+          placentatime: result
         })
       }
     },

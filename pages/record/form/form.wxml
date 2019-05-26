@@ -5,3 +5,4 @@
 </cu-custom>
 
 <calve wx:if="{{link=='calve'}}"></calve>
+<breed wx:if="{{link=='breed'}}"></breed>

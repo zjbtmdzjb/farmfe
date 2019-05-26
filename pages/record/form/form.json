@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "calve" : "/pages/record/calve/calve"
+    "calve" : "/pages/record/calve/calve",
+    "breed" : "/pages/record/breed/breed"
   }
 }
