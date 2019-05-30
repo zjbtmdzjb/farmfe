@@ -8,14 +8,61 @@
 		<input disabled='false' value='{{childbirth}}'></input>
 	</view>
   <view class="cu-form-group">
+		<view class="title">配种记录次数</view>
+		<picker bindchange="BreednChange" value="{{index}}" range="{{breedn}}">
+			<view class="picker">
+				{{index?breedn[index]+'记录':'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
 		<view class="title">发情开始时间</view>
+		<picker mode="time" value="{{time12}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='time12'>
+			<view class="picker">
+				{{time12}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">发情结束时间</view>
 		<picker mode="time" value="{{time13}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='time13'>
 			<view class="picker">
 				{{time13}}
 			</view>
 		</picker>
 	</view>
-  
+  <view class="cu-form-group" wx:if="{{index}}">
+		<view class="title">{{index?breedn[index]:''}}配种日期</view>
+		<picker mode="date" value="{{breeddate}}" start="2015-09-01" end="2020-09-01" bindchange="DateChange">
+			<view class="picker">
+				{{breeddate}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group" wx:if="{{index}}">
+		<view class="title">{{index?breedn[index]:''}}配种时间</view>
+		<picker mode="time" value="{{breedtime}}" start="00:00" end="23:59" bindchange="TimeChange" data-text='breedtime'>
+			<view class="picker">
+				{{breedtime}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group" wx:if="{{index}}">
+		<view class="title">{{index?breedn[index]:''}}冻精编号</view>
+		<input value='{{frozensemennum}}'></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">最后一次配种时间</view>
+		<input disabled='false' value='{{lastbreed}}'></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">最后一次配种冻精编号</view>
+		<input disabled='false' value='{{lastfrozensemennum}}'></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">配种间隔</view>
+		<input disabled='false' value='{{breedinterval}}'></input>
+	</view>
   <view class="padding flex flex-direction">
     <button class="cu-btn bg-gradual-pink lg">提交</button>
   </view>

@@ -6,3 +6,4 @@
 
 <calve wx:if="{{link=='calve'}}"></calve>
 <breed wx:if="{{link=='breed'}}"></breed>
+<pregnancy wx:if="{{link=='pregnancy'}}"></pregnancy>

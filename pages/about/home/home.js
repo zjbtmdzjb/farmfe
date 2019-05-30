@@ -27,6 +27,17 @@ Component({
         fail: function () { },          //失败后的回调；
         complete: function () { },      //结束后的回调(成功，失败都会执行)
       })
+    },
+    CopyLink: function (e) {
+      wx.setClipboardData({
+        data: e.currentTarget.dataset.link,
+        success: res => {
+          wx.showToast({
+            title: '已复制',
+            duration: 1000,
+          })
+        }
+      })
     }
   }
 })

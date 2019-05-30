@@ -23,7 +23,8 @@ Component({
       link:'breed'
     },{
       id:3,
-      name:'妊娠诊断记录'
+      name:'妊娠诊断记录',
+      link:'pregnancy'
     },{
       id:4,
       name:'产奶记录'
