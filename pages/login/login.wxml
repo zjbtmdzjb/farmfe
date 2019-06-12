@@ -22,18 +22,18 @@
           <view class="title">
             <text class="cuIcon-my lg text-gray"></text>
           </view>
-          <input name='username' placeholder="请输入用户名" type='text' auto-focus></input>
+          <input name='userName' placeholder="请输入用户名" type='text' bindinput='userNameInput' auto-focus></input>
         </view>
         <view class="cu-form-group">
           <view class="title">
             <text class="cuIcon-goodsnewfill lg text-gray"></text>
           </view>
-          <input name='password' placeholder="请输入密码" type='password' bindfocus="changeimg" bindblur="recoverimg"></input>
+          <input name='passWord' placeholder="请输入密码" type='password' bindfocus="changeimg" bindinput='passWordInput' bindblur="recoverimg"></input>
         </view>
       </form>
     </view>
     <view class="padding flex flex-direction">
-      <button class="cu-btn bg-gradual-green lg">登录</button>
+      <button class="cu-btn bg-gradual-green lg" bindtap='checkLogin'>登录</button>
       <button class="cu-btn bg-gray margin-tb-sm lg"   bindtap="toRegister">注册</button>
     </view>
   </view>

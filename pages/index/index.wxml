@@ -1,6 +1,6 @@
 <infomation wx:if="{{PageCur=='infomation'}}"></infomation>
 <record wx:if="{{PageCur=='record'}}"></record>
-<about wx:if="{{PageCur=='about'}}"></about>
+<about wx:if="{{PageCur=='about'}}" userName='{{ userName }}'></about>
 <view class="cu-bar tabbar bg-white shadow foot">
   <view class="action" bindtap="indexChange" data-cur="infomation">
     <view class="cuIcon-cu-image">
