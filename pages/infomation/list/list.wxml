@@ -4,58 +4,15 @@
   <view slot="content">{{name}}</view>
 </cu-custom>
 
-<view class="cu-timeline">
-  <view class="cu-time">06-17</view>
+<view class="cu-timeline" wx:for="{{content}}" wx:key="{{index}}">
+  <view class="cu-time">{{ item.birth_time }}</view>
   <view class="cu-item">
     <view class="content">
       <view class="cu-capsule radius">
-        <view class="cu-tag bg-cyan">上午</view>
-        <view class="cu-tag line-cyan">10:00</view>
+        <view class="cu-tag line-cyan">{{ item.fetus_birth_time }}</view>
       </view>
       <view class="margin-top">
-        <button class="cu-btn bg-gradual-blue padding radius text-center shadow-blur">{{name}}1</button>
-      </view>
-    </view>
-  </view>
-</view>
-<view class="cu-timeline">
-  <view class="cu-time">06-17</view>
-  <view class="cu-item">
-    <view class="content">
-      <view class="cu-capsule radius">
-        <view class="cu-tag bg-cyan">上午</view>
-        <view class="cu-tag line-cyan">10:00</view>
-      </view>
-      <view class="margin-top">
-        <button class="cu-btn bg-gradual-blue padding radius text-center shadow-blur">{{name}}1</button>
-      </view>
-    </view>
-  </view>
-</view>
-<view class="cu-timeline">
-  <view class="cu-time">06-17</view>
-  <view class="cu-item">
-    <view class="content">
-      <view class="cu-capsule radius">
-        <view class="cu-tag bg-cyan">上午</view>
-        <view class="cu-tag line-cyan">10:00</view>
-      </view>
-      <view class="margin-top">
-        <button class="cu-btn bg-gradual-blue padding radius text-center shadow-blur">{{name}}1</button>
-      </view>
-    </view>
-  </view>
-</view>
-<view class="cu-timeline">
-  <view class="cu-time">06-17</view>
-  <view class="cu-item">
-    <view class="content">
-      <view class="cu-capsule radius">
-        <view class="cu-tag bg-cyan">上午</view>
-        <view class="cu-tag line-cyan">10:00</view>
-      </view>
-      <view class="margin-top">
-        <button class="cu-btn bg-gradual-blue padding radius text-center shadow-blur">{{name}}1</button>
+        <button class="cu-btn bg-gradual-blue padding radius text-center shadow-blur" bindtap='ViewRecord' data-num='{{index}}'>{{name}}{{ index+1 }}</button>
       </view>
     </view>
   </view>

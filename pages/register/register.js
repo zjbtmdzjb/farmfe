@@ -92,10 +92,17 @@ Page({
       success: function (res) {
         if(res.data.code == 200) {
           //验证通过
-          wx.showToast({
-            title: '注册成功',
-            icon: 'none',
-            duration: 2000
+          wx.navigateTo({
+            url: '/pages/login/login',
+            success: function () {
+              wx.showToast({
+                title: '注册成功',
+                icon: 'none',
+                duration: 2000
+              })
+            },        //成功后的回调；
+            fail: function () { },          //失败后的回调；
+            complete: function () { },      //结束后的回调(成功，失败都会执行)
           })
         } else {
           //注册不成功

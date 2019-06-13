@@ -2,7 +2,7 @@
 <form>
   <view class="cu-form-group margin-top">
 		<view class="title">母牛号</view>
-		<input name='cowId' placeholder="填写母牛号" data-model='cowId' bindinput='InputWatch'></input>
+		<input name='cowid' placeholder="填写母牛号" data-model='cowid' bindinput='InputWatch'></input>
 	</view>
   <view class="cu-form-group">
 		<view class="title">分娩日期</view>

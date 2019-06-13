@@ -6,7 +6,8 @@ Component({
   data: {
     cowinfos: [{
       id:1,
-      name:'产犊记录'
+      name:'产犊记录',
+      link: 'calves'
     },{
       id:2,
       name:'配种记录'
@@ -33,8 +34,9 @@ Component({
   methods: {
     toInfo: function (e) {
       var name = e.currentTarget.dataset.text
+      var link = e.currentTarget.dataset.link
       wx.navigateTo({
-        url: '/pages/infomation/list/list?name='+name,  //跳转页面的路径，可带参数 ？隔开，不同参数用 & 分隔；相对路径
+        url: '/pages/infomation/list/list?name='+name+'&link='+link,  //跳转页面的路径，可带参数 ？隔开，不同参数用 & 分隔；相对路径
         success: function () { },        //成功后的回调；
         fail: function () { },          //失败后的回调；
         complete: function () { },      //结束后的回调(成功，失败都会执行)

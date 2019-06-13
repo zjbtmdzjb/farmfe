@@ -5,15 +5,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:''
+    name:'',
+    link:'',
+    token:'',
+    content: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let self = this
     this.setData({
-      name: options.name
+      name: options.name,
+      link: options.link
+    })
+    wx.getStorage({
+      key: 'token',
+      success: function(res) {
+        self.setData({
+          token: res.data
+        })
+      },
     })
   },
 
@@ -21,7 +34,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    let self = this
+    wx.request({
+      url: 'http://localhost:8000/api/v1/' + self.data.link + '?token=' + self.data.token,
+      method: 'GET',
+      success: function (res) {
+        if(res.data.code == 200) {
+          self.setData({
+            content: res.data.data.lists
+          })
+          console.log(self.data.content)
+        }
+      }
+    })
+  },
+  ViewRecord: function (e) {
+    var num = e.currentTarget.dataset.num
+    console.log(num)
   },
 
   /**

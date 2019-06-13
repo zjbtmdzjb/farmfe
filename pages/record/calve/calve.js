@@ -13,7 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    cowId:'',   //母牛号
+    cowid:'',   //母牛号
     birthtime: '请选择',    //分娩日期
     flowingtime: '请选择',  //阴道开始流水时间
     fetustime: '请选择',    //胎儿露出阴门时间
@@ -33,6 +33,7 @@ Component({
     milkproduction: '', //泌乳期产奶量
 	  cream: '',  //乳脂量
 	  protein: '',  //乳蛋白量
+    token: ''
   },
 
   /**
@@ -107,7 +108,85 @@ Component({
       console.log(this.data)
     },
     CheckCalve () {
-      
+      var self = this
+      //表单完整性验证
+      if (self.data.cowid == '' ||
+        self.data.birthtime == '请选择' ||
+        self.data.flowingtime == '请选择' ||
+        self.data.fetustime == '请选择' ||
+        self.data.fetusbirthtime == '请选择' ||
+        self.data.placentatime == '请选择' ||
+        self.data.index == null ||
+        self.data.index2 == null ||
+        self.data.index3 == null ||
+        self.data.yakid == '' ||
+        self.data.yakindex == '' ||
+        self.data.milkproduction == '' ||
+        self.data.cream == '' ||
+        self.data.protein == '') {
+        wx.showToast({
+          title: '请完整填写',
+          icon: 'none',
+          duration: 2000
+        })
+        return
+      }
+      wx.getStorage({
+        key: 'token',
+        success: function(res) {
+          self.setData({
+            token: res.data
+          })
+          //用这种办法解决异步好像也不太好，微信小程序支持ES6，应该可以用Promise解决这个问题
+          var url = 'http://localhost:8000/api/v1/calves?token=' + self.data.token
+          wx.request({
+            url: url,
+            method: 'POST',
+            data: {
+              cow_id: self.data.cowid,
+              birth_time: self.data.birthtime,
+              flowing_time: self.data.flowingtime,
+              fetus_time: self.data.fetustime,
+              fetus_birth_time: self.data.fetusbirthtime,
+              placenta_time: self.data.placentatime,
+              fetus_organ: self.data.fetusorgan[self.data.index],
+              is_complete: self.data.index2,
+              is_abortion: self.data.index3,
+              yak_id: self.data.yakid,
+              yak_index: self.data.yakindex,
+              milk_production: self.data.milkproduction,
+              cream: self.data.cream,
+              protein: self.data.protein
+            },
+            header: {
+              'content-type': 'application/x-www-form-urlencoded',
+              'Accept': 'application/json'
+            },
+            success: function (res) {
+              if( res.data.code == 200) {
+                wx.navigateTo({
+                  url: '/pages/index/index',  //跳转页面的路径，可带参数 ？隔开，不同参数用 & 分隔；相对路径
+                  success: function () {
+                    wx.showToast({
+                      title: '提交成功',
+                      icon: 'none',
+                      duration: 2000
+                    })
+                  },        //成功后的回调；
+                  fail: function () { },          //失败后的回调；
+                  complete: function () { },      //结束后的回调(成功，失败都会执行)
+                })
+              } else {
+                wx.showToast({
+                  title: res.data.msg,
+                  icon: 'none',
+                  duration: 2000
+                })
+              }
+            }
+          })
+        },
+      })
     }
   }
 })
