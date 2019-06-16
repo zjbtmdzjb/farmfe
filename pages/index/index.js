@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+//作者：张晶波
 const app = getApp()
 
 Page({

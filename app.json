@@ -5,7 +5,8 @@
     "pages/register/register",
     "pages/infomation/home/home",
     "pages/infomation/list/list",
-    "pages/record/form/form"
+    "pages/record/form/form",
+    "pages/infomation/calve/calve"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,4 +1,5 @@
 // pages/about/home/home.js
+//作者：张晶波
 Component({
   /**
    * 组件的属性列表

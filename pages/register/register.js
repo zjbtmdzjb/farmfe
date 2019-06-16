@@ -1,4 +1,5 @@
 // pages/register/register.js
+//作者：张晶波
 Page({
 
   /**

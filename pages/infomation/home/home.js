@@ -1,4 +1,5 @@
 // pages/infomation/home/home.js
+//作者：张晶波
 Component({
   options: {
     addGlobalClass: true,
@@ -25,9 +26,6 @@ Component({
       name:'DHI取样记录'
     },{
       id:7,
-      name:'适时提醒'
-    },{
-      id:8,
       name:'系谱档案'
     }]
   },

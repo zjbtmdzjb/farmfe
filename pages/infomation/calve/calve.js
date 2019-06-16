@@ -1,4 +1,4 @@
-// pages/infomation/list/list.js
+// pages/infomation/calve/calve.js
 //作者：张晶波
 Page({
 
@@ -6,10 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:'',
-    link:'',
+    calve:[],
+    id:'',
     token:'',
-    content: []
+    iscomplete: ['完整', '不完整'],  //胎衣排出是否完整
+    isabortion: ['无', '流产或难产'],  //是否流产或者难产
   },
 
   /**
@@ -18,12 +19,11 @@ Page({
   onLoad: function (options) {
     let self = this
     this.setData({
-      name: options.name,
-      link: options.link
+      id: options.id
     })
     wx.getStorage({
       key: 'token',
-      success: function(res) {
+      success: function (res) {
         self.setData({
           token: res.data
         })
@@ -37,21 +37,16 @@ Page({
   onReady: function () {
     let self = this
     wx.request({
-      url: 'http://localhost:8000/api/v1/' + self.data.link + '?token=' + self.data.token,
+      url: 'http://localhost:8000/api/v1/calves/'+ self.data.id + '?token=' + self.data.token,
       method: 'GET',
       success: function (res) {
-        if(res.data.code == 200) {
+        console.log(res)
+        if (res.data.code == 200) {
           self.setData({
-            content: res.data.data.lists
+            calve: res.data.data[0]
           })
         }
       }
-    })
-  },
-  ViewRecord: function (e) {
-    var num = e.currentTarget.dataset.num
-    wx.navigateTo({
-      url: '/pages/infomation/calve/calve?id=' + this.data.content[num].cow_id,
     })
   },
 
